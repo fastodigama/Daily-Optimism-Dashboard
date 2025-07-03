@@ -1,0 +1,220 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.65);
+  z-index: -1;
+}
+
+.container, .callout {
+  max-width: 650px;
+  margin: 40px auto;
+  background: #f7faff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(142,197,252,0.13);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #7f53ac;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #5ac8fa;
+  margin: 1.2rem 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.streak {
+  font-weight: bold;
+  color: #43a047;
+  margin-bottom: 1rem;
+  background: #e0f7fa;
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+.goals, .gratitude {
+  margin-bottom: 2rem;
+}
+
+.goals h2, .gratitude h2 {
+  color: #7f53ac;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.input-row, .input-group, .goals .grid-x {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"], select, .input-group-field {
+  border-radius: 16px;
+  border: 2px solid #b39ddb;
+  background: #f3e8ff;
+  font-size: 1.08rem;
+  padding: 0.7rem 1.1rem;
+  color: #333;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(127,83,172,0.07);
+  margin-bottom: 0;
+  width: 100%;
+  outline: none;
+}
+
+input[type="text"]:focus, select:focus, .input-group-field:focus {
+  border-color: #7f53ac;
+  box-shadow: 0 0 0 2px #b39ddb;
+}
+
+button, .button {
+  border-radius: 30px !important; /* Large pill shape */
+  border: none !important;
+  font-weight: 700;
+  padding: 0.6rem 1.7rem !important;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%) !important;
+  color: #fff !important;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  font-size: 1rem;
+  line-height: 1.2;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(67,233,123,0.13);
+  min-width: 90px;
+}
+
+button:hover, .button:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(67,233,123,0.18);
+}
+
+.button.tiny {
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  height: 32px;
+  min-width: 70px;
+}
+
+.button.success {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+}
+.button.success:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+}
+
+.button.alert {
+  background: linear-gradient(90deg, #ff5858 0%, #f09819 100%);
+}
+.button.alert:hover {
+  background: linear-gradient(90deg, #f09819 0%, #ff5858 100%);
+}
+
+ul.no-bullet {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#goals-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3e8ff;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(127,83,172,0.07);
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.08rem;
+  letter-spacing: 0.2px;
+}
+
+.goal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem; /* space between text and buttons */
+}
+
+#goals-list li span {
+  display: flex;
+  align-items: center;
+}
+
+#gratitude-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3e8ff;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(127,83,172,0.07);
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.08rem;
+  letter-spacing: 0.2px;
+}
+
+.goal-actions, .gratitude-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#goals-list button, #gratitude-list button {
+  margin-left: 0.5rem;
+}
+
+#gratitude-display {
+  margin-top: 0.5rem;
+  color: #43a047;
+  font-weight: bold;
+  background: #e0f7fa;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.gratitude .input-group-field,
+.goals .input-group-field {
+  border-radius: 16px !important;
+}
+
+@media (max-width: 700px) {
+  .container, .callout {
+    padding: 1rem;
+    margin: 10px;
+  }
+  .input-row, .input-group, .goals .grid-x {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  input[type="text"], select, .input-group-field {
+    width: 100%;
+  }
+}
